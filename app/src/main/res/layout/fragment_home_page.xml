@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/_10sdp"
+    android:background="#1A6200EC"
+    tools:context=".Fragment.Homepage_Fragment">
+
+        <RelativeLayout
+            android:id="@+id/RL1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_120sdp"
+            android:background="#6200ED"
+            android:padding="@dimen/_5sdp">
+
+            <ImageView
+                android:id="@+id/imgBook"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/book"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/txtKhataBookName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_toEndOf="@id/imgBook"
+                android:hint="Tilak Moradiya"
+                android:textSize="@dimen/_12sdp"
+                android:textColorHint="@color/white" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_below="@id/txtKhataBookName"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/CrdView2"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toStartOf="@id/imgFilter"
+                    app:cardCornerRadius="@dimen/_10sdp">
+
+                    <androidx.appcompat.widget.SearchView
+                        android:id="@+id/SearchView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#F2F4FF"
+                        android:textAlignment="center"
+                        tools:ignore="NotSibling" />
+
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                    android:id="@+id/imgFilter"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:src="@drawable/filter"
+                    app:tint="@color/white" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/CrdView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_90sdp"
+            android:backgroundTint="#F4F6FF"
+            app:cardCornerRadius="@dimen/_10sdp">
+
+            <LinearLayout
+                android:id="@+id/RL4"
+                android:padding="@dimen/_8sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:id="@+id/RL5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/coinImage1"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/coin"
+                        app:tint="#009C0F" />
+
+                    <TextView
+                        android:id="@+id/txtGiveMoney"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/coinImage1"
+                        android:gravity="center"
+                        android:hint="0"
+                        android:textColor="#009C0F"
+                        android:textColorHint="#009c0f"
+                        android:textSize="@dimen/_17ssp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtGiveMoney"
+                        android:layout_toEndOf="@id/coinImage1"
+                        android:gravity="center"
+                        android:text="You have Money"
+                        android:textColor="#4C4C4C"
+                        android:textSize="@dimen/_9ssp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/RL6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/coinImage2"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/coin"
+                        app:tint="#E00000" />
+
+                    <TextView
+                        android:id="@+id/txtGetMoney"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/coinImage2"
+                        android:gravity="center"
+                        android:hint="0"
+                        android:textColor="#E10000"
+                        android:textColorHint="#E10000"
+                        android:textSize="@dimen/_17ssp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtGetMoney"
+                        android:layout_toEndOf="@id/coinImage2"
+                        android:gravity="center"
+                        android:text="You have take"
+                        android:textColor="#4C4C4C"
+                        android:textSize="@dimen/_9ssp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RVDetails"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/CrdView1"
+            android:layout_marginTop="@dimen/_5sdp" />
+
+
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/btnAddPerson"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_35sdp"
+                android:backgroundTint="#6200EE"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/_10sdp"
+                android:text="Add Person"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp"
+                app:icon="@drawable/add_friend"
+                app:iconSize="@dimen/_15sdp"
+                app:iconTint="@color/white" />
+
+</RelativeLayout>
